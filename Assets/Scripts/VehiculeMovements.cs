@@ -92,7 +92,6 @@ public class VehiculeMovements : MonoBehaviour
 
     private void GetInputs()
     {
-        Debug.Log(Input.GetAxis(_horizontalAxis));
         if (Input.GetAxis(_horizontalAxis) > 0.1f)
         {
             _directionToRotate += 0.1f;
@@ -117,7 +116,7 @@ public class VehiculeMovements : MonoBehaviour
         {
             _directionToRotate = 0.0f;
         }
-        Debug.Log("directionToMove : "+_directionToRotate);
+
 
 
         _verticalInput = Input.GetAxis(_verticalAxis);
