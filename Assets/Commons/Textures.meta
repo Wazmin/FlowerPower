@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Commons/Textures.meta
 guid: a9074128b84fdb44eadbd3edf3185a81
 folderAsset: yes
 timeCreated: 1475948301
+=======
+guid: 0843f0d6876ca9545aa1bf105960d104
+folderAsset: yes
+timeCreated: 1475948766
+>>>>>>> f71ffc41028e3131240ee8ad5a7ea976f7dadf78:Assets/Models.meta
 licenseType: Free
 DefaultImporter:
   userData: 
