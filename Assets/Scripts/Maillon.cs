@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Maillon : MonoBehaviour {
-    public SpriteRenderer herbe;
+    public MeshRenderer herbe;
 
     void Awake()
     {
