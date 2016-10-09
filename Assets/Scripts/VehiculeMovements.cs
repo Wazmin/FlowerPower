@@ -101,24 +101,20 @@ public class VehiculeMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            _rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
-        }
+
         GetInputs();
         AvancerReculer();
         Tourner();
         Inclinaison();
 
-        if (++compteurRefreshVitesse > 5)
+        if (++compteurRefreshVitesse > 2)
         {
             compteurRefreshVitesse = 0;
             if (OnChangeVitesse != null)
             {
-                OnChangeVitesse(numJoueur, _velocity.y * fakeVitesseMultiplicator);
+                OnChangeVitesse(numJoueur, (_velocity.y * fakeVitesseMultiplicator >= 0 ? _velocity.y * fakeVitesseMultiplicator : 0.0f ));
                 
             }
-            //Debug.Log("vitesse : " + _velocity.y * fakeVitesseMultiplicator);
         }
 
         if (surZoneRechargeBoost)
@@ -213,7 +209,7 @@ public class VehiculeMovements : MonoBehaviour
                 facteurMouvement = 1.0f;
             }
         }
-        Debug.Log("facteur mouvement : " + facteurMouvement);
+       
         _rigidbody.AddForce(_verticalInput * transform.up * _forceAvant * facteurMouvement, ForceMode.Impulse);
 
     }

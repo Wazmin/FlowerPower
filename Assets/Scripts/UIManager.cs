@@ -26,6 +26,12 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // Images a utilisées
+    public Image Pos1;
+    public Image Pos2;
+    public Image Pos3;
+    public Image Pos4;
+
     // vitesse
     private Text vitesseJoueur1;
     private Text vitesseJoueur2;
@@ -39,10 +45,10 @@ public class UIManager : MonoBehaviour
     private Image barreBoosJoueur4;
 
     // position dans la course
-    private Text positionJoueur1;
-    private Text positionJoueur2;
-    private Text positionJoueur3;
-    private Text positionJoueur4;
+    private Image positionJoueur1;
+    private Image positionJoueur2;
+    private Image positionJoueur3;
+    private Image positionJoueur4;
 
     // Nombre de Tours
     private Text nbToursJoueur1;
@@ -74,15 +80,15 @@ public class UIManager : MonoBehaviour
         vitesseJoueur3 = GameObject.Find("Canvas/Vitesse/J3").GetComponent<Text>();
         vitesseJoueur4 = GameObject.Find("Canvas/Vitesse/J4").GetComponent<Text>();
 
-        barreBoosJoueur1 = GameObject.Find("Canvas/Boost/J1").GetComponent<Image>();
-        barreBoosJoueur2 = GameObject.Find("Canvas/Boost/J2").GetComponent<Image>();
-        barreBoosJoueur3 = GameObject.Find("Canvas/Boost/J3").GetComponent<Image>();
-        barreBoosJoueur4 = GameObject.Find("Canvas/Boost/J4").GetComponent<Image>();
+        barreBoosJoueur1 = GameObject.Find("Canvas/BoostBarre/J1").GetComponent<Image>();
+        barreBoosJoueur2 = GameObject.Find("Canvas/BoostBarre/J2").GetComponent<Image>();
+        barreBoosJoueur3 = GameObject.Find("Canvas/BoostBarre/J3").GetComponent<Image>();
+        barreBoosJoueur4 = GameObject.Find("Canvas/BoostBarre/J4").GetComponent<Image>();
 
-        positionJoueur1 = GameObject.Find("Canvas/Positions/J1").GetComponent<Text>();
-        positionJoueur2 = GameObject.Find("Canvas/Positions/J2").GetComponent<Text>();
-        positionJoueur3 = GameObject.Find("Canvas/Positions/J3").GetComponent<Text>();
-        positionJoueur4 = GameObject.Find("Canvas/Positions/J4").GetComponent<Text>();
+        positionJoueur1 = GameObject.Find("Canvas/Positions/J1").GetComponent<Image>();
+        positionJoueur2 = GameObject.Find("Canvas/Positions/J2").GetComponent<Image>();
+        positionJoueur3 = GameObject.Find("Canvas/Positions/J3").GetComponent<Image>();
+        positionJoueur4 = GameObject.Find("Canvas/Positions/J4").GetComponent<Image>();
 
         nbToursJoueur1 = GameObject.Find("Canvas/NbTours/J1").GetComponent<Text>();
         nbToursJoueur2 = GameObject.Find("Canvas/NbTours/J2").GetComponent<Text>();
