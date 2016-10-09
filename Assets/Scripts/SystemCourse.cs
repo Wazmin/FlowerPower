@@ -37,16 +37,16 @@ public class SystemCourse : MonoBehaviour {
                 {
                     tabCPaAtteindre[_numJoueur - 1] = 1;
                     tabNbTours[_numJoueur - 1]++;
-                    Debug.Log(tabNbTours[_numJoueur-1]+" tours effectué");
+                   // Debug.Log(tabNbTours[_numJoueur-1]+" tours effectué");
                 }else
                 {
-                    Debug.Log("CheckPoint atteint : "+ _numCheckPoint);
+                    //Debug.Log("CheckPoint atteint : "+ _numCheckPoint);
                 }
             }
         }
         else
         {
-            Debug.Log("Mauvais sens! le CP a atteindre "+ tabCPaAtteindre[_numJoueur - 1]);
+           // Debug.Log("Mauvais sens! le CP a atteindre "+ tabCPaAtteindre[_numJoueur - 1]);
         }
         
     }
@@ -84,5 +84,10 @@ public class SystemCourse : MonoBehaviour {
 
         tabCPprecedent[numJoueur - 1] = numCheckPoint;
         return result;
+    }
+
+    private void MajPosition()
+    {
+
     }
 }
