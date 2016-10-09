@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: 62f0a5b9eaa0b6c4c99d4ccbbdb5f4d5
+timeCreated: 1475945385
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: polySurface317
+    100002: polySurface324
+    100004: polySurface327
+    100006: polySurface328
+    100008: polySurface336
+    100010: polySurface339
+    100012: polySurface340
+    100014: polySurface346
+    100016: polySurface349
+    100018: polySurface350
+    100020: polySurface351
+    100022: polySurface352
+    100024: polySurface358
+    100026: polySurface364
+    100028: polySurface369
+    100030: polySurface3710
+    100032: polySurface3714
+    100034: polySurface372
+    100036: polySurface373
+    100038: polySurface374
+    100040: polySurface375
+    100042: polySurface376
+    100044: polySurface377
+    100046: polySurface380
+    100048: polySurface381
+    100050: polySurface382
+    100052: polySurface383
+    100054: polySurface384
+    100056: polySurface385
+    100058: polySurface386
+    100060: polySurface387
+    100062: polySurface388
+    100064: polySurface389
+    100066: polySurface4667
+    100068: polySurface6364
+    100070: polySurface6517
+    100072: polySurface6518
+    100074: polySurface6521
+    100076: polySurface8
+    100078: transform78
+    100080: //RootNode
+    400000: polySurface317
+    400002: polySurface324
+    400004: polySurface327
+    400006: polySurface328
+    400008: polySurface336
+    400010: polySurface339
+    400012: polySurface340
+    400014: polySurface346
+    400016: polySurface349
+    400018: polySurface350
+    400020: polySurface351
+    400022: polySurface352
+    400024: polySurface358
+    400026: polySurface364
+    400028: polySurface369
+    400030: polySurface3710
+    400032: polySurface3714
+    400034: polySurface372
+    400036: polySurface373
+    400038: polySurface374
+    400040: polySurface375
+    400042: polySurface376
+    400044: polySurface377
+    400046: polySurface380
+    400048: polySurface381
+    400050: polySurface382
+    400052: polySurface383
+    400054: polySurface384
+    400056: polySurface385
+    400058: polySurface386
+    400060: polySurface387
+    400062: polySurface388
+    400064: polySurface389
+    400066: polySurface4667
+    400068: polySurface6364
+    400070: polySurface6517
+    400072: polySurface6518
+    400074: polySurface6521
+    400076: polySurface8
+    400078: transform78
+    400080: //RootNode
+    2300000: polySurface324
+    2300002: polySurface327
+    2300004: polySurface328
+    2300006: polySurface336
+    2300008: polySurface339
+    2300010: polySurface340
+    2300012: polySurface346
+    2300014: polySurface349
+    2300016: polySurface350
+    2300018: polySurface351
+    2300020: polySurface352
+    2300022: polySurface358
+    2300024: polySurface364
+    2300026: polySurface369
+    2300028: polySurface3710
+    2300030: polySurface3714
+    2300032: polySurface372
+    2300034: polySurface373
+    2300036: polySurface374
+    2300038: polySurface375
+    2300040: polySurface376
+    2300042: polySurface377
+    2300044: polySurface380
+    2300046: polySurface381
+    2300048: polySurface382
+    2300050: polySurface384
+    2300052: polySurface385
+    2300054: polySurface386
+    2300056: polySurface387
+    2300058: polySurface388
+    2300060: polySurface389
+    2300062: polySurface4667
+    2300064: polySurface6364
+    2300066: polySurface6517
+    2300068: polySurface6518
+    2300070: polySurface6521
+    2300072: //RootNode
+    3300000: polySurface324
+    3300002: polySurface327
+    3300004: polySurface328
+    3300006: polySurface336
+    3300008: polySurface339
+    3300010: polySurface340
+    3300012: polySurface346
+    3300014: polySurface349
+    3300016: polySurface350
+    3300018: polySurface351
+    3300020: polySurface352
+    3300022: polySurface358
+    3300024: polySurface364
+    3300026: polySurface369
+    3300028: polySurface3710
+    3300030: polySurface3714
+    3300032: polySurface372
+    3300034: polySurface373
+    3300036: polySurface374
+    3300038: polySurface375
+    3300040: polySurface376
+    3300042: polySurface377
+    3300044: polySurface380
+    3300046: polySurface381
+    3300048: polySurface382
+    3300050: polySurface384
+    3300052: polySurface385
+    3300054: polySurface386
+    3300056: polySurface387
+    3300058: polySurface388
+    3300060: polySurface389
+    3300062: polySurface4667
+    3300064: polySurface6364
+    3300066: polySurface6517
+    3300068: polySurface6518
+    3300070: polySurface6521
+    3300072: //RootNode
+    4300000: VEICULE
+    4300002: polySurface380
+    4300004: polySurface381
+    4300006: polySurface327
+    4300008: polySurface328
+    4300010: polySurface339
+    4300012: polySurface340
+    4300014: polySurface349
+    4300016: polySurface350
+    4300018: polySurface351
+    4300020: polySurface352
+    4300022: polySurface369
+    4300024: polySurface372
+    4300026: polySurface373
+    4300028: polySurface374
+    4300030: polySurface375
+    4300032: polySurface376
+    4300034: polySurface377
+    4300036: polySurface364
+    4300038: polySurface358
+    4300040: polySurface346
+    4300042: polySurface382
+    4300044: polySurface384
+    4300046: polySurface385
+    4300048: polySurface386
+    4300050: polySurface387
+    4300052: polySurface388
+    4300054: polySurface389
+    4300056: polySurface4667
+    4300058: polySurface6364
+    4300060: polySurface6517
+    4300062: polySurface6518
+    4300064: polySurface6521
+    4300066: polySurface324
+    4300068: polySurface336
+    4300070: polySurface3710
+    4300072: polySurface3714
+    7400000: Yu_Base
+    7400002: Yu_Idle
+    7400004: Yu_Avance
+    7400006: Yu_Gauche
+    7400008: Yu_Droit
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Yu_Base
+      takeName: Yu_Base
+      firstFrame: 1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/polySurface317
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface380
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface381
+        weight: 1
+      - path: polySurface8/polySurface327
+        weight: 1
+      - path: polySurface8/polySurface328
+        weight: 1
+      - path: polySurface8/polySurface339
+        weight: 1
+      - path: polySurface8/polySurface340
+        weight: 1
+      - path: polySurface8/polySurface349
+        weight: 1
+      - path: polySurface8/polySurface350
+        weight: 1
+      - path: polySurface8/polySurface351
+        weight: 1
+      - path: polySurface8/polySurface352
+        weight: 1
+      - path: polySurface8/polySurface369
+        weight: 1
+      - path: polySurface8/polySurface372
+        weight: 1
+      - path: polySurface8/polySurface373
+        weight: 1
+      - path: polySurface8/polySurface374
+        weight: 1
+      - path: polySurface8/polySurface375
+        weight: 1
+      - path: polySurface8/polySurface376
+        weight: 1
+      - path: polySurface8/polySurface377
+        weight: 1
+      - path: polySurface324
+        weight: 1
+      - path: polySurface336
+        weight: 1
+      - path: polySurface346
+        weight: 1
+      - path: polySurface358
+        weight: 1
+      - path: polySurface364
+        weight: 1
+      - path: polySurface382
+        weight: 1
+      - path: polySurface383
+        weight: 1
+      - path: polySurface383/polySurface384
+        weight: 1
+      - path: polySurface383/polySurface385
+        weight: 1
+      - path: polySurface383/polySurface386
+        weight: 1
+      - path: polySurface383/polySurface387
+        weight: 1
+      - path: polySurface383/polySurface388
+        weight: 1
+      - path: polySurface383/polySurface389
+        weight: 1
+      - path: polySurface383/transform78
+        weight: 1
+      - path: polySurface3710
+        weight: 1
+      - path: polySurface3714
+        weight: 1
+      - path: polySurface4667
+        weight: 1
+      - path: polySurface6364
+        weight: 1
+      - path: polySurface6517
+        weight: 1
+      - path: polySurface6518
+        weight: 1
+      - path: polySurface6521
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Yu_Idle
+      takeName: Yu_Idle
+      firstFrame: 20
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/polySurface317
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface380
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface381
+        weight: 1
+      - path: polySurface8/polySurface327
+        weight: 1
+      - path: polySurface8/polySurface328
+        weight: 1
+      - path: polySurface8/polySurface339
+        weight: 1
+      - path: polySurface8/polySurface340
+        weight: 1
+      - path: polySurface8/polySurface349
+        weight: 1
+      - path: polySurface8/polySurface350
+        weight: 1
+      - path: polySurface8/polySurface351
+        weight: 1
+      - path: polySurface8/polySurface352
+        weight: 1
+      - path: polySurface8/polySurface369
+        weight: 1
+      - path: polySurface8/polySurface372
+        weight: 1
+      - path: polySurface8/polySurface373
+        weight: 1
+      - path: polySurface8/polySurface374
+        weight: 1
+      - path: polySurface8/polySurface375
+        weight: 1
+      - path: polySurface8/polySurface376
+        weight: 1
+      - path: polySurface8/polySurface377
+        weight: 1
+      - path: polySurface324
+        weight: 1
+      - path: polySurface336
+        weight: 1
+      - path: polySurface346
+        weight: 1
+      - path: polySurface358
+        weight: 1
+      - path: polySurface364
+        weight: 1
+      - path: polySurface382
+        weight: 1
+      - path: polySurface383
+        weight: 1
+      - path: polySurface383/polySurface384
+        weight: 1
+      - path: polySurface383/polySurface385
+        weight: 1
+      - path: polySurface383/polySurface386
+        weight: 1
+      - path: polySurface383/polySurface387
+        weight: 1
+      - path: polySurface383/polySurface388
+        weight: 1
+      - path: polySurface383/polySurface389
+        weight: 1
+      - path: polySurface383/transform78
+        weight: 1
+      - path: polySurface3710
+        weight: 1
+      - path: polySurface3714
+        weight: 1
+      - path: polySurface4667
+        weight: 1
+      - path: polySurface6364
+        weight: 1
+      - path: polySurface6517
+        weight: 1
+      - path: polySurface6518
+        weight: 1
+      - path: polySurface6521
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 20
+    - serializedVersion: 16
+      name: Yu_Avance
+      takeName: Yu_Avance
+      firstFrame: 210
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/polySurface317
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface380
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface381
+        weight: 1
+      - path: polySurface8/polySurface327
+        weight: 1
+      - path: polySurface8/polySurface328
+        weight: 1
+      - path: polySurface8/polySurface339
+        weight: 1
+      - path: polySurface8/polySurface340
+        weight: 1
+      - path: polySurface8/polySurface349
+        weight: 1
+      - path: polySurface8/polySurface350
+        weight: 1
+      - path: polySurface8/polySurface351
+        weight: 1
+      - path: polySurface8/polySurface352
+        weight: 1
+      - path: polySurface8/polySurface369
+        weight: 1
+      - path: polySurface8/polySurface372
+        weight: 1
+      - path: polySurface8/polySurface373
+        weight: 1
+      - path: polySurface8/polySurface374
+        weight: 1
+      - path: polySurface8/polySurface375
+        weight: 1
+      - path: polySurface8/polySurface376
+        weight: 1
+      - path: polySurface8/polySurface377
+        weight: 1
+      - path: polySurface324
+        weight: 1
+      - path: polySurface336
+        weight: 1
+      - path: polySurface346
+        weight: 1
+      - path: polySurface358
+        weight: 1
+      - path: polySurface364
+        weight: 1
+      - path: polySurface382
+        weight: 1
+      - path: polySurface383
+        weight: 1
+      - path: polySurface383/polySurface384
+        weight: 1
+      - path: polySurface383/polySurface385
+        weight: 1
+      - path: polySurface383/polySurface386
+        weight: 1
+      - path: polySurface383/polySurface387
+        weight: 1
+      - path: polySurface383/polySurface388
+        weight: 1
+      - path: polySurface383/polySurface389
+        weight: 1
+      - path: polySurface383/transform78
+        weight: 1
+      - path: polySurface3710
+        weight: 1
+      - path: polySurface3714
+        weight: 1
+      - path: polySurface4667
+        weight: 1
+      - path: polySurface6364
+        weight: 1
+      - path: polySurface6517
+        weight: 1
+      - path: polySurface6518
+        weight: 1
+      - path: polySurface6521
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 210
+    - serializedVersion: 16
+      name: Yu_Gauche
+      takeName: Yu_Gauche
+      firstFrame: 320
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/polySurface317
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface380
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface381
+        weight: 1
+      - path: polySurface8/polySurface327
+        weight: 1
+      - path: polySurface8/polySurface328
+        weight: 1
+      - path: polySurface8/polySurface339
+        weight: 1
+      - path: polySurface8/polySurface340
+        weight: 1
+      - path: polySurface8/polySurface349
+        weight: 1
+      - path: polySurface8/polySurface350
+        weight: 1
+      - path: polySurface8/polySurface351
+        weight: 1
+      - path: polySurface8/polySurface352
+        weight: 1
+      - path: polySurface8/polySurface369
+        weight: 1
+      - path: polySurface8/polySurface372
+        weight: 1
+      - path: polySurface8/polySurface373
+        weight: 1
+      - path: polySurface8/polySurface374
+        weight: 1
+      - path: polySurface8/polySurface375
+        weight: 1
+      - path: polySurface8/polySurface376
+        weight: 1
+      - path: polySurface8/polySurface377
+        weight: 1
+      - path: polySurface324
+        weight: 1
+      - path: polySurface336
+        weight: 1
+      - path: polySurface346
+        weight: 1
+      - path: polySurface358
+        weight: 1
+      - path: polySurface364
+        weight: 1
+      - path: polySurface382
+        weight: 1
+      - path: polySurface383
+        weight: 1
+      - path: polySurface383/polySurface384
+        weight: 1
+      - path: polySurface383/polySurface385
+        weight: 1
+      - path: polySurface383/polySurface386
+        weight: 1
+      - path: polySurface383/polySurface387
+        weight: 1
+      - path: polySurface383/polySurface388
+        weight: 1
+      - path: polySurface383/polySurface389
+        weight: 1
+      - path: polySurface383/transform78
+        weight: 1
+      - path: polySurface3710
+        weight: 1
+      - path: polySurface3714
+        weight: 1
+      - path: polySurface4667
+        weight: 1
+      - path: polySurface6364
+        weight: 1
+      - path: polySurface6517
+        weight: 1
+      - path: polySurface6518
+        weight: 1
+      - path: polySurface6521
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 320
+    - serializedVersion: 16
+      name: Yu_Droit
+      takeName: Yu_Droit
+      firstFrame: 370
+      lastFrame: 410
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface8
+        weight: 1
+      - path: polySurface8/polySurface317
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface380
+        weight: 1
+      - path: polySurface8/polySurface317/polySurface381
+        weight: 1
+      - path: polySurface8/polySurface327
+        weight: 1
+      - path: polySurface8/polySurface328
+        weight: 1
+      - path: polySurface8/polySurface339
+        weight: 1
+      - path: polySurface8/polySurface340
+        weight: 1
+      - path: polySurface8/polySurface349
+        weight: 1
+      - path: polySurface8/polySurface350
+        weight: 1
+      - path: polySurface8/polySurface351
+        weight: 1
+      - path: polySurface8/polySurface352
+        weight: 1
+      - path: polySurface8/polySurface369
+        weight: 1
+      - path: polySurface8/polySurface372
+        weight: 1
+      - path: polySurface8/polySurface373
+        weight: 1
+      - path: polySurface8/polySurface374
+        weight: 1
+      - path: polySurface8/polySurface375
+        weight: 1
+      - path: polySurface8/polySurface376
+        weight: 1
+      - path: polySurface8/polySurface377
+        weight: 1
+      - path: polySurface324
+        weight: 1
+      - path: polySurface336
+        weight: 1
+      - path: polySurface346
+        weight: 1
+      - path: polySurface358
+        weight: 1
+      - path: polySurface364
+        weight: 1
+      - path: polySurface382
+        weight: 1
+      - path: polySurface383
+        weight: 1
+      - path: polySurface383/polySurface384
+        weight: 1
+      - path: polySurface383/polySurface385
+        weight: 1
+      - path: polySurface383/polySurface386
+        weight: 1
+      - path: polySurface383/polySurface387
+        weight: 1
+      - path: polySurface383/polySurface388
+        weight: 1
+      - path: polySurface383/polySurface389
+        weight: 1
+      - path: polySurface383/transform78
+        weight: 1
+      - path: polySurface3710
+        weight: 1
+      - path: polySurface3714
+        weight: 1
+      - path: polySurface4667
+        weight: 1
+      - path: polySurface6364
+        weight: 1
+      - path: polySurface6517
+        weight: 1
+      - path: polySurface6518
+        weight: 1
+      - path: polySurface6521
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 370
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
