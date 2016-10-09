@@ -4,6 +4,7 @@ using System.Collections;
 public class VehiculeMovements : MonoBehaviour
 {
     public int numJoueur;
+    public Animator AN;
 
     // GRAVITE ET HAUTEUR
     public float forceAntiGrave;
@@ -45,7 +46,7 @@ public class VehiculeMovements : MonoBehaviour
     private bool tic = true;
 
     // BOOST
-    private float valBoost = 1.20f;
+    private float valBoost = 1.50f;
     public bool surZoneRechargeBoost;
     public float ticRateRechargeBoost;
     public float quantiteBoostRechargeParTic;
@@ -204,18 +205,22 @@ public class VehiculeMovements : MonoBehaviour
         {
             _directionToRotate = 0.0f;
         }
+        AN.SetFloat("Turn",_directionToRotate);
+
         _verticalInput = Input.GetAxis(_verticalAxis);
 
         if (Input.GetButton(_boutonBoost))
         {
             isBoosting = UseBoost();
+            AN.SetBool("Burst",isBoosting);
 
         }
         else if (Input.GetButtonUp(_boutonBoost))
         {
             isFirstImpulse = true;
             isBoosting = false;
-            if(boost > 0.0f)
+            AN.SetBool("Burst", isBoosting);
+            if (boost > 0.0f)
             ASImpact.PlayOneShot(sonDecceleration);
 
         }
@@ -239,7 +244,7 @@ public class VehiculeMovements : MonoBehaviour
                 facteurMouvement = 1.0f;
             }
         }
-       
+        AN.SetFloat("Speed",Mathf.Abs(_velocity.y)/_vitesseMax);
         _rigidbody.AddForce(_verticalInput * transform.up * _forceAvant * facteurMouvement, ForceMode.Impulse);
         SetPitch();
 
