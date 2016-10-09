@@ -4,7 +4,6 @@ using System.Collections;
 public class VehiculeMovements : MonoBehaviour
 {
     public int numJoueur;
-	public Animator myAnimator;
 
     // GRAVITE ET HAUTEUR
     public float forceAntiGrave;
@@ -22,6 +21,7 @@ public class VehiculeMovements : MonoBehaviour
     // NOMS DES INPUTS
     private string _horizontalAxis = "HorizontalJ";
     private string _verticalAxis = "VerticalJ";
+    private string _boutonBoost = "Boost_J";
 
     // CONTROLE DIRECTION
     private float _horizontalInput;
@@ -36,10 +36,25 @@ public class VehiculeMovements : MonoBehaviour
     private float _directionToRotate = 0.0f;
     private float _retourDeForce = 0.0f;
     public float facteurDrift;
+    private float facteurMouvement;
 
     //INFO RAYCAST
     private int layer = 1 << 8;
     private bool tic = true;
+
+    // BOOST
+    public bool surZoneRechargeBoost;
+    public float ticRateRechargeBoost;
+    public float quantiteBoostRechargeParTic;
+    private float timerRateRechargeBoost;
+    private float boost;
+    public float forceAddedWhenBoosting;
+    private bool isBoosting;
+    private bool isFirstImpulse;
+    public float forceFirstImpulse;
+    public float consomationBoostParTic;
+    private float ticRateConsoBoost;
+    private float timerRateConsoBoost;
 
     // Events
     public delegate void MajVitesse(int numJoueur,float vitesse);
@@ -47,6 +62,8 @@ public class VehiculeMovements : MonoBehaviour
 
     // compteur utiles
     private int compteurRefreshVitesse = 0; // cadence 5
+
+   
 
     // awake
     void Awake()
@@ -60,8 +77,10 @@ public class VehiculeMovements : MonoBehaviour
         // affectation des inputs selon le num joueur
         _horizontalAxis += numJoueur.ToString();
         _verticalAxis += numJoueur.ToString();
+        _boutonBoost += numJoueur.ToString();
         _intensiteRotation = -_intensiteRotation;
-
+        facteurMouvement = 1.0f;
+        ticRateConsoBoost = 0.05f;
     }
 
     // Use this for initialization
@@ -70,30 +89,38 @@ public class VehiculeMovements : MonoBehaviour
         myRayGlobalAltitude = new Ray(transform.position, transform.forward);
         Physics.Raycast(myRayGlobalAltitude, out myRayCast, Mathf.Infinity, layer);
         _hauteurReference = myRayCast.distance;
+        // init de boost a zero et booleen a false
+        surZoneRechargeBoost = false;
+        boost = 100.0f;
+        isBoosting = false;
+        timerRateRechargeBoost = Time.time;
+        timerRateConsoBoost = Time.time;
+        isFirstImpulse = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            _rigidbody.AddForce(Vector3.up * 2, ForceMode.VelocityChange);
-        }
+
         GetInputs();
         AvancerReculer();
         Tourner();
         Inclinaison();
 
-        if (++compteurRefreshVitesse > 5)
+        if (++compteurRefreshVitesse > 2)
         {
             compteurRefreshVitesse = 0;
             if (OnChangeVitesse != null)
             {
-                OnChangeVitesse(numJoueur, _velocity.y * fakeVitesseMultiplicator);
+                OnChangeVitesse(numJoueur, (_velocity.y * fakeVitesseMultiplicator >= 0 ? _velocity.y * fakeVitesseMultiplicator : 0.0f ));
+                
             }
         }
-		Animer ();
-        
+
+        if (surZoneRechargeBoost)
+        {
+            RemplirBoost();
+        }
 
     }
 
@@ -150,11 +177,41 @@ public class VehiculeMovements : MonoBehaviour
             _directionToRotate = 0.0f;
         }
         _verticalInput = Input.GetAxis(_verticalAxis);
+
+        if (Input.GetButton(_boutonBoost))
+        {
+            isBoosting = UseBoost();
+
+        }
+        else if (Input.GetButtonUp(_boutonBoost))
+        {
+            isFirstImpulse = true;
+            isBoosting = false;
+
+        }
+
     }
 
     private void AvancerReculer()
     {
-        _rigidbody.AddForce(_verticalInput * transform.up * _forceAvant, ForceMode.Impulse);
+        if (_verticalInput < 0)
+        {
+            facteurMouvement = 0.3f;
+        }
+        else
+        {
+            if (isBoosting)
+            {
+                facteurMouvement = 1.25f;
+            }
+            else // avancer vitesse normal
+            {
+                facteurMouvement = 1.0f;
+            }
+        }
+       
+        _rigidbody.AddForce(_verticalInput * transform.up * _forceAvant * facteurMouvement, ForceMode.Impulse);
+
     }
 
     private void Tourner()
@@ -195,8 +252,36 @@ public class VehiculeMovements : MonoBehaviour
         }
     }
 
-	private void Animer(){
-		myAnimator.SetFloat("Turn",_directionToRotate);
-		myAnimator.SetFloat ("Speed",_velocity.y/_vitesseMax);
-	}
+    private void RemplirBoost()
+    {
+        if (boost >= 100.0f) return;
+        if(Time.time - timerRateRechargeBoost >= ticRateRechargeBoost)
+        {
+            boost += quantiteBoostRechargeParTic;
+            if (boost >= 100.0f) boost = 100.0f;
+            timerRateRechargeBoost = Time.time;
+        }
+    }
+
+    private bool UseBoost()
+    {
+        if (boost <= 0.0f) return false;
+
+        if(Time.time - timerRateConsoBoost > ticRateConsoBoost)
+        {
+            boost -= consomationBoostParTic;
+            timerRateConsoBoost = Time.time;
+            if (boost <= 0.0f) boost = 0.0f;
+
+            if (isFirstImpulse)
+            {
+                _rigidbody.AddForce(transform.up * forceFirstImpulse, ForceMode.Impulse);
+                isFirstImpulse = false;
+            }
+            //Debug.Log("boost restant :" + boost);
+        }
+        return true;
+    }
+
+    
 }
