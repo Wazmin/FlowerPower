@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SystemCourse : MonoBehaviour {
+    public int NBTOURSJEU = 5;
     public int nombreCheckPoint;
     public int nombreDeTours;
     public int nbJoueurs;
@@ -15,12 +16,27 @@ public class SystemCourse : MonoBehaviour {
 
     private int[,] classement;
 
+    //event classement
+    public delegate void MajClasssement(int numJoueur, int posJoueur);
+    public static event MajClasssement OnChangeClassement;
+
+    public delegate void MajNbTours(int numJoueur, int nbTourJoueur);
+    public static event MajNbTours OnChangeNbTours;
+
+    public delegate void MajCP(int numJoueur, int numCP);
+    public static event MajCP OnChangeCP;
+
+
+    private float timerMaj;
+    private float ticRateMaj;
+
     void Awake()
     {
         tabCPprecedent = new int[nbJoueurs];
         tabCPaAtteindre = new int[nbJoueurs];
         tabNbTours = new int[nbJoueurs];
         classement = new int[nbJoueurs,3];
+        timerMaj = Time.time;
     }
 
 	// Use this for initialization
@@ -30,22 +46,49 @@ public class SystemCourse : MonoBehaviour {
             tabCPprecedent[i] = nombreCheckPoint;
             tabCPaAtteindre[i] = 1;
             tabNbTours[i] = 0;
-        }
 
-	}
+        }
+        Invoke("lol", 0.5f);
+
+    }
+
+    private void lol()
+    {
+        for (int i = 0; i < nbJoueurs; i++)
+        {
+            if (OnChangeNbTours != null)
+            {
+                OnChangeNbTours(i + 1, tabNbTours[i]);
+            }
+            if (OnChangeCP != null)
+            {
+                OnChangeCP(i + 1, tabCPaAtteindre[i]);
+            }
+        }
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Time.time - timerMaj > ticRateMaj)
         {
-            Debug.Log("Classement :");
+            //Debug.Log("Classement :");
             ClassementFinal.Clear();
             MajPosition();
-            foreach (int i in ClassementFinal)
+            if (OnChangeClassement != null)
             {
-                Debug.Log((i+1).ToString());
+                for(int i = 0; i < ClassementFinal.Count; i++)
+                {
+                    OnChangeClassement(ClassementFinal[i]+1, i+1);
+                }   
             }
+            //foreach (int i in ClassementFinal)
+            //{
+            //    Debug.Log((i+1).ToString());
+            //}
+            timerMaj = Time.time;
         }
+
+      
     }
 	
     public void CheckPointPasse(int _numJoueur, int _numCheckPoint)
@@ -58,10 +101,22 @@ public class SystemCourse : MonoBehaviour {
                 {
                     tabCPaAtteindre[_numJoueur - 1] = 1;
                     tabNbTours[_numJoueur - 1]++;
-                   // Debug.Log(tabNbTours[_numJoueur-1]+" tours effectué");
-                }else
+
+                    //ajout d'un tour
+                    if (OnChangeNbTours != null)
+                    {
+                        OnChangeNbTours(_numJoueur, tabNbTours[_numJoueur - 1]);
+                    }
+
+                    // Debug.Log(tabNbTours[_numJoueur-1]+" tours effectué");
+                }
+                else
                 {
                     //Debug.Log("CheckPoint atteint : "+ _numCheckPoint);
+                }
+                if (OnChangeCP != null)
+                {
+                    OnChangeCP(_numJoueur, tabCPaAtteindre[_numJoueur - 1]);
                 }
             }
         }
