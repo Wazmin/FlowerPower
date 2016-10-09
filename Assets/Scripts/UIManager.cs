@@ -26,27 +26,43 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // Images a utilisées
+    public Image Pos1;
+    public Image Pos2;
+    public Image Pos3;
+    public Image Pos4;
+
+    // vitesse
     private Text vitesseJoueur1;
     private Text vitesseJoueur2;
     private Text vitesseJoueur3;
     private Text vitesseJoueur4;
 
-    //-------------------------------------------------------
-    // Boost
-    private Image _imageBarreBoost;
-    private Image _imageFlouBoost;
+    //private Barre de boost
+    private Image barreBoosJoueur1;
+    private Image barreBoosJoueur2;
+    private Image barreBoosJoueur3;
+    private Image barreBoosJoueur4;
 
-    //texte de mort
-    private Text _textMort;
+    // position dans la course
+    private Image positionJoueur1;
+    private Image positionJoueur2;
+    private Image positionJoueur3;
+    private Image positionJoueur4;
 
-    // systeme GameManager
-    private Canvas _canvasTabScore;
-    private GameObject _BtnRetourMenu;
-    public Text _txtMessageGameManager;
-    public Text _chronoPartie;
+    // Nombre de Tours
+    private Text nbToursJoueur1;
+    private Text nbToursJoueur2;
+    private Text nbToursJoueur3;
+    private Text nbToursJoueur4;
 
+    // numCheckPoint en cours
+    private Text numCheckPointJoueur1;
+    private Text numCheckPointJoueur2;
+    private Text numCheckPointJoueur3;
+    private Text numCheckPointJoueur4;
 
-
+   
     // Use this for initialization
     void Start()
     {
@@ -64,13 +80,28 @@ public class UIManager : MonoBehaviour
         vitesseJoueur3 = GameObject.Find("Canvas/Vitesse/J3").GetComponent<Text>();
         vitesseJoueur4 = GameObject.Find("Canvas/Vitesse/J4").GetComponent<Text>();
 
+        barreBoosJoueur1 = GameObject.Find("Canvas/BoostBarre/J1").GetComponent<Image>();
+        barreBoosJoueur2 = GameObject.Find("Canvas/BoostBarre/J2").GetComponent<Image>();
+        barreBoosJoueur3 = GameObject.Find("Canvas/BoostBarre/J3").GetComponent<Image>();
+        barreBoosJoueur4 = GameObject.Find("Canvas/BoostBarre/J4").GetComponent<Image>();
 
-    }
+        positionJoueur1 = GameObject.Find("Canvas/Positions/J1").GetComponent<Image>();
+        positionJoueur2 = GameObject.Find("Canvas/Positions/J2").GetComponent<Image>();
+        positionJoueur3 = GameObject.Find("Canvas/Positions/J3").GetComponent<Image>();
+        positionJoueur4 = GameObject.Find("Canvas/Positions/J4").GetComponent<Image>();
 
-    // Update is called once per frame
-    void Update()
-    {
-       
+        nbToursJoueur1 = GameObject.Find("Canvas/NbTours/J1").GetComponent<Text>();
+        nbToursJoueur2 = GameObject.Find("Canvas/NbTours/J2").GetComponent<Text>();
+        nbToursJoueur3 = GameObject.Find("Canvas/NbTours/J3").GetComponent<Text>();
+        nbToursJoueur4 = GameObject.Find("Canvas/NbTours/J4").GetComponent<Text>();
+
+        numCheckPointJoueur1 = GameObject.Find("Canvas/NumCheckpoint/J1").GetComponent<Text>();
+        numCheckPointJoueur2 = GameObject.Find("Canvas/NumCheckpoint/J2").GetComponent<Text>();
+        numCheckPointJoueur3 = GameObject.Find("Canvas/NumCheckpoint/J3").GetComponent<Text>();
+        numCheckPointJoueur4 = GameObject.Find("Canvas/NumCheckpoint/J4").GetComponent<Text>();
+
+
+
     }
 
     //private 
@@ -94,30 +125,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // UI Dose Boost
-    private void MajBoost(int _nbBoost)
+    // maj de la barre boost
+    private void UIBarreBoost(float _jauge)
     {
-        //nbBoost += _nbBoost;
-        float fillToDo = 0.0f;
-        switch (_nbBoost)
-        {
-            case 0:
-                fillToDo = 0.0f;
-                break;
-            case 1:
-                fillToDo = 0.33f;
-                break;
-            case 2:
-                fillToDo = 0.67f;
-                break;
-            case 3:
-                fillToDo = 1.0f;
-                break;
-            default:
-                fillToDo = 1.5f; //bug visuel
-                break;
-        }
-        _imageBarreBoost.fillAmount = fillToDo;
+
     }
 
 }
