@@ -1,0 +1,952 @@
+fileFormatVersion: 2
+guid: 658cd21f793299a4cbaff88a43ffbaab
+timeCreated: 1476007182
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: aile_droite
+    100002: aile_gauche
+    100004: arriere
+    100006: arrirere
+    100008: arrirere 1
+    100010: avant_helice
+    100012: avant_helice 1
+    100014: cockpit
+    100016: Coque_dessus
+    100018: Coque_dessus1
+    100020: directionalLight1
+    100022: directionalLight2
+    100024: directionalLight3
+    100026: mirroredCutMesh1
+    100028: pCube1
+    100030: pCube1 1
+    100032: pCube10
+    100034: pCube11
+    100036: pCube12
+    100038: pCube13
+    100040: pCube14
+    100042: pCube15
+    100044: pCube16
+    100046: pCube17
+    100048: pCube18
+    100050: pCube19
+    100052: pCube2
+    100054: pCube2 1
+    100056: pCube20
+    100058: pCube21
+    100060: pCube22
+    100062: pCube23
+    100064: pCube24
+    100066: pCube3
+    100068: pCube3 1
+    100070: pCube4
+    100072: pCube4 1
+    100074: pCube5
+    100076: pCube5 1
+    100078: pCube6
+    100080: pCube6 1
+    100082: pCube7
+    100084: pCube7 1
+    100086: pCube8
+    100088: pCube8 1
+    100090: //RootNode
+    100092: pSphere6
+    100094: pSphere6 1
+    100096: reacteur
+    100098: reacteur 1
+    400000: aile_droite
+    400002: aile_gauche
+    400004: arriere
+    400006: arrirere
+    400008: arrirere 1
+    400010: avant_helice
+    400012: avant_helice 1
+    400014: cockpit
+    400016: Coque_dessus
+    400018: Coque_dessus1
+    400020: directionalLight1
+    400022: directionalLight2
+    400024: directionalLight3
+    400026: mirroredCutMesh1
+    400028: pCube1
+    400030: pCube1 1
+    400032: pCube10
+    400034: pCube11
+    400036: pCube12
+    400038: pCube13
+    400040: pCube14
+    400042: pCube15
+    400044: pCube16
+    400046: pCube17
+    400048: pCube18
+    400050: pCube19
+    400052: pCube2
+    400054: pCube2 1
+    400056: pCube20
+    400058: pCube21
+    400060: pCube22
+    400062: pCube23
+    400064: pCube24
+    400066: pCube3
+    400068: pCube3 1
+    400070: pCube4
+    400072: pCube4 1
+    400074: pCube5
+    400076: pCube5 1
+    400078: pCube6
+    400080: pCube6 1
+    400082: pCube7
+    400084: pCube7 1
+    400086: pCube8
+    400088: pCube8 1
+    400090: //RootNode
+    400092: pSphere6
+    400094: pSphere6 1
+    400096: reacteur
+    400098: reacteur 1
+    2300000: aile_droite
+    2300002: aile_gauche
+    2300004: arriere
+    2300006: arrirere
+    2300008: arrirere 1
+    2300010: avant_helice
+    2300012: avant_helice 1
+    2300014: cockpit
+    2300016: Coque_dessus
+    2300018: Coque_dessus1
+    2300020: pCube1
+    2300022: pCube1 1
+    2300024: pCube10
+    2300026: pCube11
+    2300028: pCube12
+    2300030: pCube13
+    2300032: pCube14
+    2300034: pCube15
+    2300036: pCube16
+    2300038: pCube17
+    2300040: pCube18
+    2300042: pCube19
+    2300044: pCube2
+    2300046: pCube2 1
+    2300048: pCube20
+    2300050: pCube21
+    2300052: pCube22
+    2300054: pCube23
+    2300056: pCube24
+    2300058: pCube3
+    2300060: pCube3 1
+    2300062: pCube4
+    2300064: pCube4 1
+    2300066: pCube5
+    2300068: pCube5 1
+    2300070: pCube6
+    2300072: pCube6 1
+    2300074: pCube7
+    2300076: pCube7 1
+    2300078: pCube8
+    2300080: pCube8 1
+    2300082: pSphere6
+    2300084: pSphere6 1
+    2300086: reacteur
+    2300088: reacteur 1
+    3300000: aile_droite
+    3300002: aile_gauche
+    3300004: arriere
+    3300006: arrirere
+    3300008: arrirere 1
+    3300010: avant_helice
+    3300012: avant_helice 1
+    3300014: cockpit
+    3300016: Coque_dessus
+    3300018: Coque_dessus1
+    3300020: pCube1
+    3300022: pCube1 1
+    3300024: pCube10
+    3300026: pCube11
+    3300028: pCube12
+    3300030: pCube13
+    3300032: pCube14
+    3300034: pCube15
+    3300036: pCube16
+    3300038: pCube17
+    3300040: pCube18
+    3300042: pCube19
+    3300044: pCube2
+    3300046: pCube2 1
+    3300048: pCube20
+    3300050: pCube21
+    3300052: pCube22
+    3300054: pCube23
+    3300056: pCube24
+    3300058: pCube3
+    3300060: pCube3 1
+    3300062: pCube4
+    3300064: pCube4 1
+    3300066: pCube5
+    3300068: pCube5 1
+    3300070: pCube6
+    3300072: pCube6 1
+    3300074: pCube7
+    3300076: pCube7 1
+    3300078: pCube8
+    3300080: pCube8 1
+    3300082: pSphere6
+    3300084: pSphere6 1
+    3300086: reacteur
+    3300088: reacteur 1
+    4300000: cockpit
+    4300002: aile_gauche
+    4300004: pSphere6
+    4300006: arriere
+    4300008: pCube12
+    4300010: pCube13
+    4300012: pCube14
+    4300014: pCube11
+    4300016: pCube10
+    4300018: pCube15
+    4300020: pCube16
+    4300022: pCube17
+    4300024: pCube18
+    4300026: pCube19
+    4300028: pCube20
+    4300030: pCube21
+    4300032: pCube22
+    4300034: pCube23
+    4300036: pCube24
+    4300038: aile_droite
+    4300040: pSphere6
+    4300042: Coque_dessus
+    4300044: reacteur
+    4300046: arrirere
+    4300048: avant_helice
+    4300050: pCube2
+    4300052: pCube3
+    4300054: pCube4
+    4300056: pCube5
+    4300058: pCube6
+    4300060: pCube7
+    4300062: pCube8
+    4300064: pCube1
+    4300066: Coque_dessus1
+    4300068: reacteur
+    4300070: arrirere
+    4300072: avant_helice
+    4300074: pCube2
+    4300076: pCube3
+    4300078: pCube4
+    4300080: pCube5
+    4300082: pCube6
+    4300084: pCube7
+    4300086: pCube8
+    4300088: pCube1
+    7400000: Pose Base
+    7400002: 'Idle '
+    7400004: Avancer
+    7400006: gauche
+    7400008: droite
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Pose Base
+      takeName: Pose Base
+      firstFrame: 1
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockpit
+        weight: 1
+      - path: cockpit/aile_droite
+        weight: 1
+      - path: cockpit/aile_droite/pSphere6
+        weight: 1
+      - path: cockpit/aile_gauche
+        weight: 1
+      - path: cockpit/aile_gauche/pSphere6 1
+        weight: 1
+      - path: cockpit/arriere
+        weight: 1
+      - path: cockpit/arriere/pCube10
+        weight: 1
+      - path: cockpit/arriere/pCube11
+        weight: 1
+      - path: cockpit/arriere/pCube12
+        weight: 1
+      - path: cockpit/arriere/pCube13
+        weight: 1
+      - path: cockpit/arriere/pCube14
+        weight: 1
+      - path: cockpit/arriere/pCube15
+        weight: 1
+      - path: cockpit/arriere/pCube16
+        weight: 1
+      - path: cockpit/arriere/pCube17
+        weight: 1
+      - path: cockpit/arriere/pCube18
+        weight: 1
+      - path: cockpit/arriere/pCube19
+        weight: 1
+      - path: cockpit/arriere/pCube20
+        weight: 1
+      - path: cockpit/arriere/pCube21
+        weight: 1
+      - path: cockpit/arriere/pCube22
+        weight: 1
+      - path: cockpit/arriere/pCube23
+        weight: 1
+      - path: cockpit/arriere/pCube24
+        weight: 1
+      - path: cockpit/Coque_dessus
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube1
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube2
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube3
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube4
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube5
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube6
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube7
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube8
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur/arrirere
+        weight: 1
+      - path: cockpit/Coque_dessus1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube1 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube2 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube3 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube4 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube5 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube6 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube7 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube8 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1/arrirere 1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: directionalLight3
+        weight: 1
+      - path: mirroredCutMesh1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: 'Idle '
+      takeName: 'Idle '
+      firstFrame: 12
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockpit
+        weight: 1
+      - path: cockpit/aile_droite
+        weight: 1
+      - path: cockpit/aile_droite/pSphere6
+        weight: 1
+      - path: cockpit/aile_gauche
+        weight: 1
+      - path: cockpit/aile_gauche/pSphere6 1
+        weight: 1
+      - path: cockpit/arriere
+        weight: 1
+      - path: cockpit/arriere/pCube10
+        weight: 1
+      - path: cockpit/arriere/pCube11
+        weight: 1
+      - path: cockpit/arriere/pCube12
+        weight: 1
+      - path: cockpit/arriere/pCube13
+        weight: 1
+      - path: cockpit/arriere/pCube14
+        weight: 1
+      - path: cockpit/arriere/pCube15
+        weight: 1
+      - path: cockpit/arriere/pCube16
+        weight: 1
+      - path: cockpit/arriere/pCube17
+        weight: 1
+      - path: cockpit/arriere/pCube18
+        weight: 1
+      - path: cockpit/arriere/pCube19
+        weight: 1
+      - path: cockpit/arriere/pCube20
+        weight: 1
+      - path: cockpit/arriere/pCube21
+        weight: 1
+      - path: cockpit/arriere/pCube22
+        weight: 1
+      - path: cockpit/arriere/pCube23
+        weight: 1
+      - path: cockpit/arriere/pCube24
+        weight: 1
+      - path: cockpit/Coque_dessus
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube1
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube2
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube3
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube4
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube5
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube6
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube7
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube8
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur/arrirere
+        weight: 1
+      - path: cockpit/Coque_dessus1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube1 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube2 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube3 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube4 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube5 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube6 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube7 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube8 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1/arrirere 1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: directionalLight3
+        weight: 1
+      - path: mirroredCutMesh1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Avancer
+      takeName: Avancer
+      firstFrame: 205
+      lastFrame: 305
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockpit
+        weight: 1
+      - path: cockpit/aile_droite
+        weight: 1
+      - path: cockpit/aile_droite/pSphere6
+        weight: 1
+      - path: cockpit/aile_gauche
+        weight: 1
+      - path: cockpit/aile_gauche/pSphere6 1
+        weight: 1
+      - path: cockpit/arriere
+        weight: 1
+      - path: cockpit/arriere/pCube10
+        weight: 1
+      - path: cockpit/arriere/pCube11
+        weight: 1
+      - path: cockpit/arriere/pCube12
+        weight: 1
+      - path: cockpit/arriere/pCube13
+        weight: 1
+      - path: cockpit/arriere/pCube14
+        weight: 1
+      - path: cockpit/arriere/pCube15
+        weight: 1
+      - path: cockpit/arriere/pCube16
+        weight: 1
+      - path: cockpit/arriere/pCube17
+        weight: 1
+      - path: cockpit/arriere/pCube18
+        weight: 1
+      - path: cockpit/arriere/pCube19
+        weight: 1
+      - path: cockpit/arriere/pCube20
+        weight: 1
+      - path: cockpit/arriere/pCube21
+        weight: 1
+      - path: cockpit/arriere/pCube22
+        weight: 1
+      - path: cockpit/arriere/pCube23
+        weight: 1
+      - path: cockpit/arriere/pCube24
+        weight: 1
+      - path: cockpit/Coque_dessus
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube1
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube2
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube3
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube4
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube5
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube6
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube7
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube8
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur/arrirere
+        weight: 1
+      - path: cockpit/Coque_dessus1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube1 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube2 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube3 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube4 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube5 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube6 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube7 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube8 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1/arrirere 1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: directionalLight3
+        weight: 1
+      - path: mirroredCutMesh1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: gauche
+      takeName: gauche
+      firstFrame: 310
+      lastFrame: 350
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockpit
+        weight: 1
+      - path: cockpit/aile_droite
+        weight: 1
+      - path: cockpit/aile_droite/pSphere6
+        weight: 1
+      - path: cockpit/aile_gauche
+        weight: 1
+      - path: cockpit/aile_gauche/pSphere6 1
+        weight: 1
+      - path: cockpit/arriere
+        weight: 1
+      - path: cockpit/arriere/pCube10
+        weight: 1
+      - path: cockpit/arriere/pCube11
+        weight: 1
+      - path: cockpit/arriere/pCube12
+        weight: 1
+      - path: cockpit/arriere/pCube13
+        weight: 1
+      - path: cockpit/arriere/pCube14
+        weight: 1
+      - path: cockpit/arriere/pCube15
+        weight: 1
+      - path: cockpit/arriere/pCube16
+        weight: 1
+      - path: cockpit/arriere/pCube17
+        weight: 1
+      - path: cockpit/arriere/pCube18
+        weight: 1
+      - path: cockpit/arriere/pCube19
+        weight: 1
+      - path: cockpit/arriere/pCube20
+        weight: 1
+      - path: cockpit/arriere/pCube21
+        weight: 1
+      - path: cockpit/arriere/pCube22
+        weight: 1
+      - path: cockpit/arriere/pCube23
+        weight: 1
+      - path: cockpit/arriere/pCube24
+        weight: 1
+      - path: cockpit/Coque_dessus
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube1
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube2
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube3
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube4
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube5
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube6
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube7
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube8
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur/arrirere
+        weight: 1
+      - path: cockpit/Coque_dessus1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube1 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube2 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube3 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube4 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube5 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube6 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube7 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube8 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1/arrirere 1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: directionalLight3
+        weight: 1
+      - path: mirroredCutMesh1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 310
+    - serializedVersion: 16
+      name: droite
+      takeName: droite
+      firstFrame: 370
+      lastFrame: 410
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: cockpit
+        weight: 1
+      - path: cockpit/aile_droite
+        weight: 1
+      - path: cockpit/aile_droite/pSphere6
+        weight: 1
+      - path: cockpit/aile_gauche
+        weight: 1
+      - path: cockpit/aile_gauche/pSphere6 1
+        weight: 1
+      - path: cockpit/arriere
+        weight: 1
+      - path: cockpit/arriere/pCube10
+        weight: 1
+      - path: cockpit/arriere/pCube11
+        weight: 1
+      - path: cockpit/arriere/pCube12
+        weight: 1
+      - path: cockpit/arriere/pCube13
+        weight: 1
+      - path: cockpit/arriere/pCube14
+        weight: 1
+      - path: cockpit/arriere/pCube15
+        weight: 1
+      - path: cockpit/arriere/pCube16
+        weight: 1
+      - path: cockpit/arriere/pCube17
+        weight: 1
+      - path: cockpit/arriere/pCube18
+        weight: 1
+      - path: cockpit/arriere/pCube19
+        weight: 1
+      - path: cockpit/arriere/pCube20
+        weight: 1
+      - path: cockpit/arriere/pCube21
+        weight: 1
+      - path: cockpit/arriere/pCube22
+        weight: 1
+      - path: cockpit/arriere/pCube23
+        weight: 1
+      - path: cockpit/arriere/pCube24
+        weight: 1
+      - path: cockpit/Coque_dessus
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube1
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube2
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube3
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube4
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube5
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube6
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube7
+        weight: 1
+      - path: cockpit/Coque_dessus/avant_helice/pCube8
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur
+        weight: 1
+      - path: cockpit/Coque_dessus/reacteur/arrirere
+        weight: 1
+      - path: cockpit/Coque_dessus1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube1 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube2 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube3 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube4 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube5 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube6 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube7 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/avant_helice 1/pCube8 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1
+        weight: 1
+      - path: cockpit/Coque_dessus1/reacteur 1/arrirere 1
+        weight: 1
+      - path: directionalLight1
+        weight: 1
+      - path: directionalLight2
+        weight: 1
+      - path: directionalLight3
+        weight: 1
+      - path: mirroredCutMesh1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 370
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
