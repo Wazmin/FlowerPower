@@ -32,6 +32,21 @@ ModelImporter:
     100048: pTorus5
     100050: transform1
     100052: transform2
+    100054: pCube20
+    100056: pCube21
+    100058: pCube22
+    100060: pCube23
+    100062: pCube24
+    100064: pCube25
+    100066: pCube26
+    100068: pCube27
+    100070: polySurface1
+    100072: polySurface2
+    100074: transform3
+    100076: transform4
+    100078: transform5
+    100080: pCube28
+    100082: pTorus6
     400000: //RootNode
     400002: pCube1
     400004: pCube10
@@ -59,6 +74,21 @@ ModelImporter:
     400048: pTorus5
     400050: transform1
     400052: transform2
+    400054: pCube20
+    400056: pCube21
+    400058: pCube22
+    400060: pCube23
+    400062: pCube24
+    400064: pCube25
+    400066: pCube26
+    400068: pCube27
+    400070: polySurface1
+    400072: polySurface2
+    400074: transform3
+    400076: transform4
+    400078: transform5
+    400080: pCube28
+    400082: pTorus6
     2300000: pCube1
     2300002: pCube10
     2300004: pCube2
@@ -81,6 +111,15 @@ ModelImporter:
     2300038: pTorus3
     2300040: pTorus4
     2300042: pTorus5
+    2300044: pCube20
+    2300046: pCube21
+    2300048: pCube22
+    2300050: pCube23
+    2300052: pCube24
+    2300054: polySurface1
+    2300056: polySurface2
+    2300058: pCube28
+    2300060: pTorus6
     3300000: pCube1
     3300002: pCube10
     3300004: pCube2
@@ -103,6 +142,15 @@ ModelImporter:
     3300038: pTorus3
     3300040: pTorus4
     3300042: pTorus5
+    3300044: pCube20
+    3300046: pCube21
+    3300048: pCube22
+    3300050: pCube23
+    3300052: pCube24
+    3300054: polySurface1
+    3300056: polySurface2
+    3300058: pCube28
+    3300060: pTorus6
     4300000: pCube1
     4300002: pCube2
     4300004: pCube3
@@ -125,6 +173,15 @@ ModelImporter:
     4300038: pTorus5
     4300040: pCube18
     4300042: pCube19
+    4300044: pCube20
+    4300046: pCube21
+    4300048: pCube22
+    4300050: pCube23
+    4300052: pCube24
+    4300054: polySurface1
+    4300056: polySurface2
+    4300058: pTorus6
+    4300060: pCube28
     9500000: //RootNode
   materials:
     importMaterials: 1
