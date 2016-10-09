@@ -4,6 +4,7 @@ using System.Collections;
 public class VehiculeMovements : MonoBehaviour
 {
     public int numJoueur;
+	public Animator myAnimator;
 
     // GRAVITE ET HAUTEUR
     public float forceAntiGrave;
@@ -91,6 +92,7 @@ public class VehiculeMovements : MonoBehaviour
                 OnChangeVitesse(numJoueur, _velocity.y * fakeVitesseMultiplicator);
             }
         }
+		Animer ();
         
 
     }
@@ -191,7 +193,10 @@ public class VehiculeMovements : MonoBehaviour
         {
             tic = true;
         }
-
-
     }
+
+	private void Animer(){
+		myAnimator.SetFloat("Turn",_directionToRotate);
+		myAnimator.SetFloat ("Speed",_velocity.y/_vitesseMax);
+	}
 }
