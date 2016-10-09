@@ -66,7 +66,13 @@ public class UIManager : MonoBehaviour
     private Text numCheckPointJoueur3;
     private Text numCheckPointJoueur4;
 
-   
+    // Compteur
+    public Text compteurJ1;
+    public Text compteurJ2;
+    public Text compteurJ3;
+    public Text compteurJ4;
+
+
     // Use this for initialization
     void Start()
     {
@@ -83,6 +89,8 @@ public class UIManager : MonoBehaviour
         SystemCourse.OnChangeClassement += UIMajPosition;
         SystemCourse.OnChangeNbTours += UINbTour;
         SystemCourse.OnChangeCP += UInbCheckPoint;
+        GameManager.OnChangeCompteur += UICompteur;
+        GameManager.OnFinJoueur += UIFinJoueur;
 
         //GameObject canvasGO = GameObject.Find("Canvas").GetComponent<GameObject>();
         //_imageBarreVideBazooka = GameObject.Find("Canvas/HUD/ChargeBazooka/barreVide").GetComponent<Image>();
@@ -141,7 +149,7 @@ public class UIManager : MonoBehaviour
     // maj de la barre boost
     private void UIBarreBoost(int numJoueur, float _jauge)
     {
-        Debug.Log("UI ChangeBoost : "+numJoueur);
+
         if (numJoueur == 1)
         {
             barreBoosJoueur1.fillAmount = _jauge/100.0f;
@@ -220,6 +228,35 @@ public class UIManager : MonoBehaviour
         else if (numJoueur == 4)
         {
             numCheckPointJoueur4.text = _nbCheckPoint.ToString() + endCP;
+        }
+    }
+
+    private void UICompteur(string s)
+    {
+        compteurJ1.text = s;
+        compteurJ2.text = s;
+        compteurJ3.text = s;
+        compteurJ4.text = s;
+    }
+
+    private void UIFinJoueur(int _numJoueur, string _message)
+    {
+
+        if (_numJoueur == 1)
+        {
+            compteurJ1.text = _message;
+        }
+        else if (_numJoueur == 2)
+        {
+            compteurJ2.text = _message;
+        }
+        else if (_numJoueur == 3)
+        {
+            compteurJ3.text = _message;
+        }
+        else if (_numJoueur == 4)
+        {
+            compteurJ4.text = _message;
         }
     }
 

@@ -6,6 +6,8 @@ public class VehiculeMovements : MonoBehaviour
     public int numJoueur;
     public Animator AN;
 
+    public bool estActif = false;
+
     // GRAVITE ET HAUTEUR
     public float forceAntiGrave;
     public float dynamicVelocityControler;
@@ -121,18 +123,20 @@ public class VehiculeMovements : MonoBehaviour
 
         GetInputs();
         AvancerReculer();
-        
+        if (OnChangeVitesse != null)
+        {
+            OnChangeVitesse(numJoueur, (_velocity.y * fakeVitesseMultiplicator >= 0 ? _velocity.y * fakeVitesseMultiplicator : 0.0f));
+
+        }
+
         Tourner();
         Inclinaison();
 
         if (++compteurRefreshVitesse > 2)
         {
             compteurRefreshVitesse = 0;
-            if (OnChangeVitesse != null)
-            {
-                OnChangeVitesse(numJoueur, (_velocity.y * fakeVitesseMultiplicator >= 0 ? _velocity.y * fakeVitesseMultiplicator : 0.0f ));
-                
-            }
+
+          
         }
 
         if (surZoneRechargeBoost)
@@ -181,6 +185,7 @@ public class VehiculeMovements : MonoBehaviour
 
     private void GetInputs()
     {
+        if (!estActif) return;
         if (Input.GetAxis(_horizontalAxis) > 0.1f)
         {
             _directionToRotate += 0.1f;
@@ -346,6 +351,11 @@ public class VehiculeMovements : MonoBehaviour
             timerSonsImpact = Time.time;
         }
         
+    }
+
+    public void Activate(bool b)
+    {
+        estActif = b;
     }
 
 }

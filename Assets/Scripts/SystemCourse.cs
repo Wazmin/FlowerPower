@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SystemCourse : MonoBehaviour {
-    public int NBTOURSJEU = 5;
+    public GameManager GM;
+    public int NBTOURSJEU = 1;
     public int nombreCheckPoint;
     public int nombreDeTours;
     public int nbJoueurs;
+    private int nbFinJoueur;
     public List<GameObject> goCheckpoint = new List<GameObject>();
     public GameObject[] vaisseauxJoueurs = new GameObject[4];
     List<int> ClassementFinal = new List<int>();
@@ -49,7 +51,7 @@ public class SystemCourse : MonoBehaviour {
 
         }
         Invoke("lol", 0.5f);
-
+        nbFinJoueur = 0;
     }
 
     private void lol()
@@ -107,6 +109,18 @@ public class SystemCourse : MonoBehaviour {
                     {
                         OnChangeNbTours(_numJoueur, tabNbTours[_numJoueur - 1]);
                     }
+
+                    //detection fin joueur
+                    if (tabNbTours[_numJoueur - 1] >= NBTOURSJEU)
+                    {
+                        GM.FinJoueur(_numJoueur);
+                        nbFinJoueur++;
+                        if(nbFinJoueur >= nbJoueurs)
+                        {
+                            GM.FinPartie();
+                        }
+                    }
+
 
                     // Debug.Log(tabNbTours[_numJoueur-1]+" tours effectué");
                 }
