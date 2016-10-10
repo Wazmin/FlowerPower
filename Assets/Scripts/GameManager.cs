@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour {
     public AudioSource AS;
     public AudioClip bipInter;
     public AudioClip bipFinal;
-
+    public AudioSource ASmusique;
+    public AudioClip MusiqueFin;
     // timer
     public bool decompteActif;
     public int nbDecomte;
@@ -161,6 +162,9 @@ public class GameManager : MonoBehaviour {
     public void FinPartie()
     {
         ActiverVaisseaux(false);
+        ASmusique.Stop();
+        ASmusique.clip = MusiqueFin;
+        ASmusique.Play();
         for(int i = 0; i < nbJoueur; i++)
         {
             if (OnChangeCompteur != null)
@@ -193,4 +197,6 @@ public class GameManager : MonoBehaviour {
             }
         }
     }
+
+
 }

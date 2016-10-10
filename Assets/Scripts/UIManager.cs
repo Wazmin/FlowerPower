@@ -272,4 +272,18 @@ public class UIManager : MonoBehaviour
         messageFin.text = textFin;
     }
 
+    void OnDestroy()
+    {
+        VehiculeMovements.OnChangeVitesse -= UIVitesse;
+        VehiculeMovements.OnChangeBoost -= UIBarreBoost;
+        SystemCourse.OnChangeClassement -= UIMajPosition;
+        SystemCourse.OnChangeNbTours -= UINbTour;
+        SystemCourse.OnChangeCP -= UInbCheckPoint;
+        GameManager.OnChangeCompteur -= UICompteur;
+        GameManager.OnFinJoueur -= UIFinJoueur;
+        GameManager.OnChangeClassement -= UIMajPosition;
+        GameManager.OnFinPartie -= MessageFinJeu;
+
+    }
+
 }

@@ -360,7 +360,7 @@ public class VehiculeMovements : MonoBehaviour
     {
         if (Time.time - timerSonsImpact >= ticRateSonsImpact)
         {
-            ASImpact.PlayOneShot(sonsImpacts[Random.Range(0, 1)], 0.3f);
+            ASImpact.PlayOneShot(sonsImpacts[Random.Range(0, 1)], 0.2f);
             timerSonsImpact = Time.time;
         }
         
