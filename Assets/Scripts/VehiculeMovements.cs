@@ -61,6 +61,7 @@ public class VehiculeMovements : MonoBehaviour
     public float consomationBoostParTic;
     private float ticRateConsoBoost;
     private float timerRateConsoBoost;
+    private int cptBoost = 0;
 
     // Events
     public delegate void MajVitesse(int numJoueur,float vitesse);
@@ -123,11 +124,6 @@ public class VehiculeMovements : MonoBehaviour
 
         GetInputs();
         AvancerReculer();
-        if (OnChangeVitesse != null)
-        {
-            OnChangeVitesse(numJoueur, (_velocity.y * fakeVitesseMultiplicator >= 0 ? _velocity.y * fakeVitesseMultiplicator : 0.0f));
-
-        }
 
         Tourner();
         Inclinaison();
@@ -139,7 +135,7 @@ public class VehiculeMovements : MonoBehaviour
           
         }
 
-        if (surZoneRechargeBoost)
+        if (cptBoost>=1)
         {
             RemplirBoost();
         }
@@ -157,6 +153,10 @@ public class VehiculeMovements : MonoBehaviour
         _rigidbody.AddForce(Vector3.up * forceAntiGrave * 9.81f, ForceMode.Force);
         _velocity = _rigidbody.velocity;
 
+        _rigidbody.AddForce(Vector3.up * Mathf.Clamp((_hauteurReference + 1.5f) - _hauteurVaisseau, 0, 1000) * 9.81f * 6000f, ForceMode.Force);  // cette ligne a étée faite par lucas
+
+
+
         // correction hauteur
         _rigidbodyVelocityOnY = _velocity.y;
         _rigidbodyVelocityOnY = -_rigidbodyVelocityOnY;
@@ -167,6 +167,11 @@ public class VehiculeMovements : MonoBehaviour
 
             _rigidbodyVelocityOnY = (_hauteurReference - _hauteurVaisseau) * valeurVitesseAmortiChute; //valeur vitesse amorti
             _rigidbody.AddForce(Vector3.up * _rigidbodyVelocityOnY, ForceMode.Force);
+
+            //clamp sur les cotés
+            _velocity = transform.InverseTransformVector(_velocity);
+            _velocity.x = Mathf.Clamp(_velocity.x, -facteurDrift, facteurDrift);
+            _rigidbody.velocity = transform.TransformVector(_velocity);
         }
         else
         {
@@ -186,6 +191,7 @@ public class VehiculeMovements : MonoBehaviour
     private void GetInputs()
     {
         if (!estActif) return;
+
         if (Input.GetAxis(_horizontalAxis) > 0.1f)
         {
             _directionToRotate += 0.1f;
@@ -249,7 +255,12 @@ public class VehiculeMovements : MonoBehaviour
                 facteurMouvement = 1.0f;
             }
         }
+
         AN.SetFloat("Speed",Mathf.Abs(_velocity.y)/_vitesseMax);
+        if (OnChangeVitesse != null)
+        {
+            OnChangeVitesse(numJoueur, _velocity.y * fakeVitesseMultiplicator);
+        }
         _rigidbody.AddForce(_verticalInput * transform.up * _forceAvant * facteurMouvement, ForceMode.Impulse);
         SetPitch();
 
@@ -356,6 +367,24 @@ public class VehiculeMovements : MonoBehaviour
     public void Activate(bool b)
     {
         estActif = b;
+        if (!b)
+        {
+            _directionToRotate = 0.0f;
+            _verticalInput = 0.0f;
+            _horizontalInput = 0.0f;
+        }
+    }
+
+    public void ZoneBoost (bool entrer)
+    {
+        if (entrer)
+        {
+            cptBoost++;
+        }
+        else
+        {
+            cptBoost--;
+        }
     }
 
 }

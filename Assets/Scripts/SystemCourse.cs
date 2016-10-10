@@ -83,6 +83,8 @@ public class SystemCourse : MonoBehaviour {
                     OnChangeClassement(ClassementFinal[i]+1, i+1);
                 }   
             }
+
+            GM.PosJoueurFini();
             //foreach (int i in ClassementFinal)
             //{
             //    Debug.Log((i+1).ToString());
@@ -99,7 +101,7 @@ public class SystemCourse : MonoBehaviour {
         {
             if(tabCPaAtteindre[_numJoueur -1] == _numCheckPoint)
             {
-                if(++tabCPaAtteindre[_numJoueur - 1] >= nombreCheckPoint)
+                if(++tabCPaAtteindre[_numJoueur - 1] > nombreCheckPoint)
                 {
                     tabCPaAtteindre[_numJoueur - 1] = 1;
                     tabNbTours[_numJoueur - 1]++;

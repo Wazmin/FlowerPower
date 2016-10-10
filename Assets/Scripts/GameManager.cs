@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
     public int nbJoueur;
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public VehiculeMovements vaisseauJ2;
     public VehiculeMovements vaisseauJ3;
     public VehiculeMovements vaisseauJ4;
+
+    public List<int> classementJoueur;
 
     // timer
     public bool decompteActif;
@@ -22,6 +25,9 @@ public class GameManager : MonoBehaviour {
     public delegate void MajFinJoueur(int numJoueur, string s);
     public static event MajFinJoueur OnFinJoueur;
 
+    //event classement
+    public delegate void MajClasssement(int numJoueur, int posJoueur);
+    public static event MajClasssement OnChangeClassement;
 
     // Use this for initialization
     void Start () {
@@ -32,6 +38,7 @@ public class GameManager : MonoBehaviour {
         ActiverVaisseaux(false);
 
         Invoke("lol",1.0f);
+        classementJoueur = new List<int>();
     }
 
     void lol()
@@ -55,6 +62,7 @@ public class GameManager : MonoBehaviour {
             {
                 OnChangeCompteur("");
             }
+            decompteActif = true;
         }
 	
 	}
@@ -107,6 +115,8 @@ public class GameManager : MonoBehaviour {
         {
             OnFinJoueur(numJoueur,"Finish");
         }
+        classementJoueur.Add(numJoueur);
+
         if(numJoueur == 1)
         {
             vaisseauJ1.Activate(false);
@@ -137,5 +147,17 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+    }
+
+    public void PosJoueurFini()
+    {
+        int pos = 1;
+        foreach(int numJoueur in classementJoueur)
+        {
+            if (OnChangeClassement != null)
+            {
+                OnChangeClassement(numJoueur,pos++);
+            }
+        }
     }
 }

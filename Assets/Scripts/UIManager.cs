@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
     private string endLaps;
     private string endCP;
 
+    public GameManager GM;
+
     static UIManager _manager;
     public static UIManager Get
     {
@@ -91,6 +93,7 @@ public class UIManager : MonoBehaviour
         SystemCourse.OnChangeCP += UInbCheckPoint;
         GameManager.OnChangeCompteur += UICompteur;
         GameManager.OnFinJoueur += UIFinJoueur;
+        GameManager.OnChangeClassement += UIMajPosition;
 
         //GameObject canvasGO = GameObject.Find("Canvas").GetComponent<GameObject>();
         //_imageBarreVideBazooka = GameObject.Find("Canvas/HUD/ChargeBazooka/barreVide").GetComponent<Image>();

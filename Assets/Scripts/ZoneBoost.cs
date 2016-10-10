@@ -7,7 +7,7 @@ public class ZoneBoost : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<VehiculeMovements>().surZoneRechargeBoost = true;
+            other.GetComponent<VehiculeMovements>().ZoneBoost(true);
         }
     }
 
@@ -15,7 +15,7 @@ public class ZoneBoost : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<VehiculeMovements>().surZoneRechargeBoost = false;
+            other.GetComponent<VehiculeMovements>().ZoneBoost(false);
         }
     }
 }
