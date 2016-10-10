@@ -2,12 +2,19 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class ExampleClass : MonoBehaviour
+public class loadscene : MonoBehaviour
 {
-    public GameObject projectile;
+    public  UnityEngine.AudioSource vroum;
+public AudioClip ready;
+
+    
     void Update()
     {
-        if (Input.GetButtonDown("Boost_J1"))
+        if (Input.GetButtonDown("Boost_J1")) {
+        vroum.PlayOneShot(ready, 2.0f);
             SceneManager.LoadScene("principale");
+        
     }
+
+}
 }
