@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public int nbJoueur;
     public int nombreCheckPoint;
     private bool jeuActif = false;
+    private bool partieFinie;
     public VehiculeMovements vaisseauJ1;
     public VehiculeMovements vaisseauJ2;
     public VehiculeMovements vaisseauJ3;
     public VehiculeMovements vaisseauJ4;
 
     public List<int> classementJoueur;
+    public AudioSource AS;
+    public AudioClip bipInter;
+    public AudioClip bipFinal;
 
     // timer
     public bool decompteActif;
@@ -29,6 +34,9 @@ public class GameManager : MonoBehaviour {
     public delegate void MajClasssement(int numJoueur, int posJoueur);
     public static event MajClasssement OnChangeClassement;
 
+    public delegate void MajFinPartie();
+    public static event MajFinPartie OnFinPartie;
+
     // Use this for initialization
     void Start () {
         nbJoueur = GameObject.Find("SystemCourse").GetComponent<SystemCourse>().nbJoueurs;
@@ -39,6 +47,7 @@ public class GameManager : MonoBehaviour {
 
         Invoke("lol",1.0f);
         classementJoueur = new List<int>();
+        partieFinie = false;
     }
 
     void lol()
@@ -64,7 +73,15 @@ public class GameManager : MonoBehaviour {
             }
             decompteActif = true;
         }
-	
+
+        if (partieFinie)
+        {
+            if (Input.GetButtonDown("Boost_J1"))
+            {
+                SceneManager.LoadScene("title");
+            }
+        }
+
 	}
 
     public void Decomte()
@@ -77,9 +94,14 @@ public class GameManager : MonoBehaviour {
             
             if (nbDecomte <= 0)
             {
+                AS.PlayOneShot(bipFinal);
                 decompteActif = false;
                 // prevoir UI
                 ActiverVaisseaux(true);
+            }
+            else
+            {
+                AS.PlayOneShot(bipInter);
             }
 
             if (OnChangeCompteur != null)
@@ -146,7 +168,18 @@ public class GameManager : MonoBehaviour {
                 OnChangeCompteur("FIN PARTIE");
             }
         }
+        Invoke("RelancerPremiereScene", 3.0f);
+        if (OnFinPartie != null)
+        {
+            OnFinPartie();
+        }
+    }
 
+    private void RelancerPremiereScene()
+    {
+        //SceneManager.LoadScene("title");
+       
+        partieFinie = true;
     }
 
     public void PosJoueurFini()

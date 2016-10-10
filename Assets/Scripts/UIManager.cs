@@ -74,6 +74,9 @@ public class UIManager : MonoBehaviour
     public Text compteurJ3;
     public Text compteurJ4;
 
+    public Text messageFin;
+    string textFin = "Appuyez sur A pour \nretourner à l'écran titre";
+
 
     // Use this for initialization
     void Start()
@@ -94,6 +97,7 @@ public class UIManager : MonoBehaviour
         GameManager.OnChangeCompteur += UICompteur;
         GameManager.OnFinJoueur += UIFinJoueur;
         GameManager.OnChangeClassement += UIMajPosition;
+        GameManager.OnFinPartie += MessageFinJeu;
 
         //GameObject canvasGO = GameObject.Find("Canvas").GetComponent<GameObject>();
         //_imageBarreVideBazooka = GameObject.Find("Canvas/HUD/ChargeBazooka/barreVide").GetComponent<Image>();
@@ -261,6 +265,11 @@ public class UIManager : MonoBehaviour
         {
             compteurJ4.text = _message;
         }
+    }
+
+    private void MessageFinJeu()
+    {
+        messageFin.text = textFin;
     }
 
 }

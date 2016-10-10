@@ -83,6 +83,7 @@ public class VehiculeMovements : MonoBehaviour
     public AudioClip sonAcceleration;
     public AudioClip sonDecceleration;
     public AudioClip[] sonsImpacts = new AudioClip[2];
+    public AudioClip sonEntreeBoost;
 
     // awake
     void Awake()
@@ -123,7 +124,7 @@ public class VehiculeMovements : MonoBehaviour
     {
 
         GetInputs();
-        AvancerReculer();
+        
 
         Tourner();
         Inclinaison();
@@ -144,6 +145,7 @@ public class VehiculeMovements : MonoBehaviour
 
     void FixedUpdate()
     {
+        AvancerReculer();
         CorrectifHauteur();
     }
 
@@ -358,7 +360,7 @@ public class VehiculeMovements : MonoBehaviour
     {
         if (Time.time - timerSonsImpact >= ticRateSonsImpact)
         {
-            ASImpact.PlayOneShot(sonsImpacts[Random.Range(0, 1)], 0.7f);
+            ASImpact.PlayOneShot(sonsImpacts[Random.Range(0, 1)], 0.3f);
             timerSonsImpact = Time.time;
         }
         
@@ -377,6 +379,8 @@ public class VehiculeMovements : MonoBehaviour
 
     public void ZoneBoost (bool entrer)
     {
+        int tmpValBoost = cptBoost;
+
         if (entrer)
         {
             cptBoost++;
@@ -385,6 +389,14 @@ public class VehiculeMovements : MonoBehaviour
         {
             cptBoost--;
         }
+
+        if(tmpValBoost == 0 && cptBoost == 1)//activation boost
+        {
+            ASImpact.PlayOneShot(sonEntreeBoost,0.7f);
+        }
+   
+
+
     }
 
 }

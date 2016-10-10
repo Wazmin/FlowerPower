@@ -15,13 +15,15 @@ public class CameraScript : MonoBehaviour {
 	void Start () {
 	
 	}
+
+    void FixedUpdate()
+    {
+        distance = Vector3.Distance(target.position, transform.position);
+        //print (distance);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * (speed + (Mathf.Clamp(distance - maxDistance, 0, 30)) * DampMultiplier));
+        transform.LookAt(lookatTarget);
+    }
 	
 
-	void FixedUpdate () {
-		distance = Vector3.Distance(target.position, transform.position);
-		//print (distance);
-		transform.position = Vector3.MoveTowards (transform.position, target.position, Time.deltaTime * (speed + (Mathf.Clamp(distance - maxDistance, 0, 30))* DampMultiplier) );
-		transform.LookAt (lookatTarget);
-
-	}
+	
 }
