@@ -12,7 +12,7 @@ public class loadscene : MonoBehaviour
 	private string Map = "Canyon";
     public Text nbJoueur;
 	public Text NomMap;
-    private int nombreJoueur = 4;
+	public int nombreJoueur = 4;
 
     private float timer;
 
