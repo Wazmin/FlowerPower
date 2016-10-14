@@ -5,15 +5,18 @@ using System.Collections;
 
 
 public class GetInfo : MonoBehaviour {
-	public int NbJoueur;
+    //Variables servant à charger la bonne scène dans l'écrand de selection des vaisseaux
+    public int NbJoueur;
 	public string NomMap;
-	public int vaisseauJ1;
+    //variables d'index des vaisseaux selon le joueur
+    public int vaisseauJ1;
 	public int vaisseauJ2;
 	public int vaisseauJ3;
 	public int vaisseauJ4;
 	private GameObject Loading;
 	// Use this for initialization
 	void Start () {
+        //je vais chercher les infos dans le script LoadSelection qui est sur l'objet A button. C'est un peu faire un détour pour rien, mais au moins GetInfo ne contient QUE les informations.
 		Loading = GameObject.Find ("A button");
 		DontDestroyOnLoad(GameObject.Find("Info"));
 	}

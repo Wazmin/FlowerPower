@@ -3,33 +3,32 @@ using System.Collections;
 
 public class Selection : MonoBehaviour {
 	
-
+    //Panel pour griser une fois le vaisseau sélectionné
 	public GameObject Panel1, Panel2, Panel3, Panel4;
-
+    //int pour bouger d'un mesh a l'autre dans la fonction changemesh
 	private int selectvalue1 = 1;
 	private int selectvalue2 = 1;
 	private int selectvalue3 = 1;
 	private int selectvalue4 = 1;
-	private int indexjoueur;
+	//bool vérifier que tel joueur a sélectionné son vaisseau et fixer selectvalue
 	public bool V1selected = false;
 	public bool V2selected = false;
 	public bool V3selected = false;
 	public bool V4selected = false;
-
+    //les quatre vaisseaux des quatre joueurs
 	public GameObject J1V1, J1V2, J1V3, J1V4;
 	public GameObject J2V1, J2V2, J2V3, J2V4;
 	public GameObject J3V1, J3V2, J3V3, J3V4;
 	public GameObject J4V1, J4V2, J4V3, J4V4;
-
+    //Cases des joueurs 2 3 et 4 pour les desactiver s'ils ne sont pas présents
 	public GameObject CJ2, CJ3, CJ4;
-   
-
-
+   //timer
 	private float timer;
 
 
 	private GameObject Info;
 	void Start () {
+        //On récupère les infos de l'écran titre et on désactive les cases inutiles
 		Info = GameObject.Find ("Info");
 		deactivate ();
 	}
@@ -38,6 +37,7 @@ public class Selection : MonoBehaviour {
     void FixedUpdate()
     {
         //changer de vaisseau
+        //J1
         if (V1selected == false)
         {
                 if (Time.time - timer > 0.4f)
@@ -61,6 +61,7 @@ public class Selection : MonoBehaviour {
                     }
                 }
         }
+        //J2
         if (V2selected == false)
         {
 
@@ -85,6 +86,7 @@ public class Selection : MonoBehaviour {
                     }
                 }
         }
+        //J3
         if (V3selected == false)
         {
                 if (Time.time - timer > 0.4f)
@@ -108,6 +110,7 @@ public class Selection : MonoBehaviour {
                     }
             }
         }
+        //J4
         if (V4selected == false)
         {
                 if (Time.time - timer > 0.4f)
@@ -209,7 +212,7 @@ public class Selection : MonoBehaviour {
         if (selectvalue4 < 1)
             selectvalue4 = 4;
     }
-
+    //griser la case d'un joueur une fois son vaisseau sélectionné
     void griser(){
 		if (V1selected == true)
 			Panel1.SetActive (true);
@@ -222,6 +225,7 @@ public class Selection : MonoBehaviour {
 	}
 
 	void changemesh (){
+        //changement de l'image du vaisseau
 		//J1
 		if (selectvalue1 == 1){
 			J1V1.gameObject.SetActive(true);
@@ -346,7 +350,7 @@ public class Selection : MonoBehaviour {
 
 
 
-
+//interrupteur pour éviter que deactivate tour en boucle. Je sais pas s'il est encore nécessaire
 private bool interrupteur = true;
 
 void deactivate(){
