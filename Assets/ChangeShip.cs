@@ -26,7 +26,6 @@ public class ChangeShip : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         RecupIndex();
-        dispatch();
         activevaisseau();
     }
 	
@@ -80,42 +79,5 @@ public class ChangeShip : MonoBehaviour {
         }
     }
     //répartir les bons objets au bon endroit.
-    void dispatch()
-    {
-        if (indexvaisseau == 1)
-        {
-            Camdujoueur.GetComponent<CameraScript>().target = TargetLucas;
-            Camdujoueur.GetComponent<CameraScript>().lookatTarget = VtargetLucas;
-        }
-        if (indexvaisseau == 2)
-        {
-            vehicule.GetComponent<VehiculeMovements>().AN = ANYu;
-            Camdujoueur.GetComponent<CameraScript>().target = TargetYu;
-            Camdujoueur.GetComponent<CameraScript>().lookatTarget = VtargetYu;
-            vehicule.GetComponent<VehiculeMovements>().sonAcceleration = boost2;
-            vehicule.GetComponent<VehiculeMovements>().sonDecceleration = rela2;
-            sourcemoteur.clip = mot2;
-            sourcemoteur.Play();
-        }
-        if (indexvaisseau == 3)
-        {
-            vehicule.GetComponent<VehiculeMovements>().AN = ANFelix;
-            Camdujoueur.GetComponent<CameraScript>().target = TargetFelix;
-            Camdujoueur.GetComponent<CameraScript>().lookatTarget = VtargetFelix;
-            vehicule.GetComponent<VehiculeMovements>().sonAcceleration = boost3;
-            vehicule.GetComponent<VehiculeMovements>().sonDecceleration = rela3;
-            sourcemoteur.clip = mot3;
-            sourcemoteur.Play();
-        }
-        if (indexvaisseau == 4)
-        {
-            vehicule.GetComponent<VehiculeMovements>().AN = ANMax;
-            Camdujoueur.GetComponent<CameraScript>().target = TargetMax;
-            Camdujoueur.GetComponent<CameraScript>().lookatTarget = VtargetMax;
-            vehicule.GetComponent<VehiculeMovements>().sonAcceleration = boost4;
-            vehicule.GetComponent<VehiculeMovements>().sonDecceleration = rela4;
-            sourcemoteur.clip = mot4;
-            sourcemoteur.Play();
-        }
-    }
+   
 }

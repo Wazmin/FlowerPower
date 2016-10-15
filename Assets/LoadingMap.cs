@@ -70,9 +70,10 @@ public class LoadingMap : MonoBehaviour {
                 if (Time.time - timer > 0.5f) { 
                           if (Map == "Canyon")
                           {
-                          vroum.PlayOneShot(ready, 2.0f);
-                          SceneManager.LoadScene("principale" + nombreJoueur.ToString() + "J");
-                           }
+                            vroum.PlayOneShot(ready, 2.0f);
+                         // SceneManager.LoadScene("principale" + nombreJoueur.ToString() + "J");
+                        SceneManager.LoadScene("1Jtest");
+                    }
                            if (Map == "RCanyon")
                           {
                            vroum.PlayOneShot(ready, 2.0f);
