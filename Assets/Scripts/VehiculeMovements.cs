@@ -24,9 +24,9 @@ public class VehiculeMovements : MonoBehaviour
     public int valeurVitesseAmortiChute = 1700;
 
     // NOMS DES INPUTS
-    private string _horizontalAxis = "HorizontalJ";
-    private string _verticalAxis = "VerticalJ";
-    private string _boutonBoost = "Boost_J";
+    public string _horizontalAxis = "HorizontalJ";
+    public string _verticalAxis = "VerticalJ";
+    public string _boutonBoost = "Boost_J";
 
     // CONTROLE DIRECTION
     private float _horizontalInput;
@@ -93,7 +93,7 @@ public class VehiculeMovements : MonoBehaviour
         {
             Debug.LogError("rigidbody Vehicule non trouvé !");
         }
-        //_hauteurReference = transform.position.y;
+        _hauteurReference = transform.position.y;
         // affectation des inputs selon le num joueur
         _horizontalAxis += numJoueur.ToString();
         _verticalAxis += numJoueur.ToString();
@@ -101,6 +101,7 @@ public class VehiculeMovements : MonoBehaviour
         _intensiteRotation = -_intensiteRotation;
         facteurMouvement = 1.0f;
         ticRateConsoBoost = 0.05f;
+
     }
 
     // Use this for initialization
@@ -398,5 +399,5 @@ public class VehiculeMovements : MonoBehaviour
 
 
     }
-
+  
 }
