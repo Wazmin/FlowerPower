@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
         {
             if (Input.GetButtonDown("Boost_J1"))
             {
-                SceneManager.LoadScene("EcranTitre2");
+                SceneManager.LoadScene("EcranTitre3");
             }
         }
 

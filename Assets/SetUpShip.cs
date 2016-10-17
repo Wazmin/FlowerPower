@@ -180,13 +180,13 @@ public class SetUpShip : MonoBehaviour {
         GameObject.Find("Joueur 2/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._verticalAxis = "VerticalJ" + IndexJoueur.ToString();
         GameObject.Find("Joueur 2/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._boutonBoost = "Boost_J" + IndexJoueur.ToString();
         }
-        if (JoueurContainer.name == "Joueur 3")
+        if (IndexJoueur == 3)
         {
             GameObject.Find("Joueur 3/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._horizontalAxis = "HorizontalJ" + IndexJoueur.ToString();
             GameObject.Find("Joueur 3/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._verticalAxis = "VerticalJ" + IndexJoueur.ToString();
             GameObject.Find("Joueur 3/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._boutonBoost = "Boost_J" + IndexJoueur.ToString();
         }
-        if (JoueurContainer.name == "Joueur 4")
+        if (IndexJoueur == 4)
         {
             GameObject.Find("Joueur 4/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._horizontalAxis = "HorizontalJ" + IndexJoueur.ToString();
             GameObject.Find("Joueur 4/Vaisseau" + IndexVaisseau.ToString() + "(Clone)").GetComponent<VehiculeMovements>()._verticalAxis = "VerticalJ" + IndexJoueur.ToString();
