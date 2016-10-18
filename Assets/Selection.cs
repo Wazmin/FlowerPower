@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Selection : MonoBehaviour {
 	
@@ -244,6 +245,86 @@ public class Selection : MonoBehaviour {
                 }
             }
         }
+        //retour arrière.
+        //J1
+        if (Input.GetButtonDown("Action4_J1"))
+            {
+                if (V1selected == true)
+                {
+                    Panel1.SetActive(false);
+                    V1selected = false;
+                    B1.SetActive(true);
+                    if (selectvalue1 == 1)
+                        V1available = true;
+                    if (selectvalue1 == 2)
+                        V2available = true;
+                    if (selectvalue1 == 3)
+                        V3available = true;
+                    if (selectvalue1 == 4)
+                        V4available = true;
+                }
+                else
+                {
+                    Object.Destroy(GameObject.Find("Info"));
+                    Object.Destroy(GameObject.Find("MusiqueEcranTitre"));
+                    SceneManager.LoadScene("EcranTitre3");
+                }
+            }
+        //J2
+        if (Input.GetButtonDown("Action4_J2"))
+        {
+            if (V2selected == true)
+            {
+                Panel2.SetActive(false);
+                V2selected = false;
+                B2.SetActive(true);
+                if (selectvalue2 == 1)
+                    V1available = true;
+                if (selectvalue2 == 2)
+                    V2available = true;
+                if (selectvalue2 == 3)
+                    V3available = true;
+                if (selectvalue2 == 4)
+                    V4available = true;
+            }
+        }
+        //J3
+        if (Input.GetButtonDown("Action4_J3"))
+        {
+            if (V3selected == true)
+            {
+                Panel3.SetActive(false);
+                V3selected = false;
+                B3.SetActive(true);
+                if (selectvalue3 == 1)
+                    V1available = true;
+                if (selectvalue3 == 2)
+                    V2available = true;
+                if (selectvalue3 == 3)
+                    V3available = true;
+                if (selectvalue3 == 4)
+                    V4available = true;
+            }
+        }
+        //J4
+        if (Input.GetButtonDown("Action4_J4"))
+        {
+            if (V3selected == true)
+            {
+                Panel4.SetActive(false);
+                V4selected = false;
+                B4.SetActive(true);
+                if (selectvalue4 == 1)
+                    V1available = true;
+                if (selectvalue4 == 2)
+                    V2available = true;
+                if (selectvalue4 == 3)
+                    V3available = true;
+                if (selectvalue4 == 4)
+                    V4available = true;
+            }
+        }
+
     }
 
     void overvalue()
@@ -438,7 +519,7 @@ private bool interrupteur = true;
             }
             else
             {
-            B1.GetComponent<SpriteRenderer>().sprite = BoutonA;
+                B1.GetComponent<SpriteRenderer>().sprite = BoutonA;
             }
         }
         if (selectvalue1 == 2)

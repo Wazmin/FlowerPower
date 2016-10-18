@@ -34,6 +34,7 @@ public class SystemCourse : MonoBehaviour {
 
     void Awake()
     {
+        NBTOURSJEU = GameObject.Find("Info").GetComponent<GetInfo>().Nbtour;
         tabCPprecedent = new int[nbJoueurs];
         tabCPaAtteindre = new int[nbJoueurs];
         tabNbTours = new int[nbJoueurs];
