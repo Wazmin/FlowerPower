@@ -15,6 +15,7 @@ public class LoadSelection: MonoBehaviour
 	public Text nbJoueur;
 	public Text NomMap;
     public Text NombreDeTour;
+    public Text ToursWord;
 	public int nombreJoueur = 4;
     public int NombreTour = 3;
 
@@ -150,11 +151,11 @@ public class LoadSelection: MonoBehaviour
 	{
 		if (nombreJoueur <= 1)
 		{
-			return (nombreJoueur.ToString() + " joueur");
+			return (nombreJoueur.ToString() + " player");
 		}
 		else
 		{
-			return (nombreJoueur.ToString() + " joueurs");
+			return (nombreJoueur.ToString() + " players");
 		}
 	}
 
@@ -165,18 +166,21 @@ public class LoadSelection: MonoBehaviour
             nbJoueur.color = Color.grey;
             NomMap.color = Color.grey;
             NombreDeTour.color = Color.white;
+            ToursWord.color = Color.white;
         }
         if (selecteur == 2)
         {
             nbJoueur.color = Color.grey;
             NomMap.color = Color.white;
             NombreDeTour.color = Color.grey;
+            ToursWord.color = Color.grey;
         }
         if (selecteur == 3)
         {
             nbJoueur.color = Color.white;
             NomMap.color = Color.grey;
             NombreDeTour.color = Color.grey;
+            ToursWord.color = Color.grey;
         }
     }
 
